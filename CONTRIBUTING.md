@@ -42,3 +42,7 @@ Open an issue with the smallest reproduction you can manage. Include the
 ## Security
 
 Do not open a public issue for a security problem. See [SECURITY.md](SECURITY.md).
+
+## Development
+
+Use an isolated virtual environment when installing locally. The package depends on nothing beyond the standard library, but a virtual environment keeps that install from touching the rest of the system.
