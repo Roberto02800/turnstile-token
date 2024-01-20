@@ -37,3 +37,5 @@ patched.
   can spend credits. Rotate immediately if it escapes.
 - Prefer the `X-Private-Key` header over putting the key in a request body -
   bodies end up in debug logs far more often than headers do.
+
+Corrections are made before public disclosure so that users can upgrade without exposure.
