@@ -13,5 +13,9 @@ env/
 .pytest_cache/
 .coverage
 htmlcov/
+.ruff_cache/
+.tox/
+coverage.xml
+*.log
 .DS_Store
 Thumbs.db
