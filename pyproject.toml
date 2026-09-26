@@ -40,6 +40,7 @@ Documentation = "https://clearance.sh/docs/quickstart"
 Pricing = "https://clearance.sh/register?ref=UQ428VM"
 Status = "https://clearance.sh/status"
 Source = "https://clearance.sh/register?ref=UQ428VM"
+Issues = "https://github.com/Roberto02800/turnstile-token/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["."]
