@@ -19,6 +19,14 @@ Please include:
 You will get an acknowledgement within two working days and a fuller response
 within seven.
 
+## Rotating a key
+
+Rotation takes effect immediately: the old key stops working the moment the
+new one is issued. Deploy the new key to every integration first, then
+rotate. A task that was already accepted keeps running, but reading its
+result still needs a valid key, so re-poll with the new key before the
+five-minute window closes.
+
 ## Scope
 
 This package is a thin client over a third-party API. Problems in the API
