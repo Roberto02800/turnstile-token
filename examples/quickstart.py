@@ -25,6 +25,13 @@ def main() -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 2
 
+    try:
+        balance = client.balance()
+    except TurnstileError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+    print(f"balance:   {balance:.5f}", file=sys.stderr)
     print(f"processing Turnstile on {url} ...", file=sys.stderr)
 
     try:
