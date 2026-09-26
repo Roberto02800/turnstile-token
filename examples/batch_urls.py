@@ -37,11 +37,12 @@ def main() -> int:
         print(f"error: {exc}", file=sys.stderr)
         return 2
 
-    lines = [
-        line.strip()
-        for line in open(path, encoding="utf-8")
-        if line.strip() and not line.startswith("#")
-    ]
+    with open(path, encoding="utf-8") as fh:
+        lines = [
+            line.strip()
+            for line in fh
+            if line.strip() and not line.startswith("#")
+        ]
 
     if not lines:
         print("no URLs found", file=sys.stderr)
