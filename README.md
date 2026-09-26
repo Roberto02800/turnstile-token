@@ -166,8 +166,8 @@ Two calls, no SDK, no browser:
 # 1. create the task
 curl -s https://api.clearance.sh/createTask \
   -H 'content-type: application/json' \
-  -H 'x-private-key: YOUR_API_KEY' \
   -d '{
+    "clientKey": "YOUR_API_KEY",
     "task": {
       "type": "AntiTurnstileTask",
       "websiteURL": "https://example.com/login",
@@ -184,8 +184,7 @@ curl -s https://api.clearance.sh/createTask \
 # 2. read the result (sleep ~500ms first, then poll every 200-300ms)
 curl -s https://api.clearance.sh/getTaskResult \
   -H 'content-type: application/json' \
-  -H 'x-private-key: YOUR_API_KEY' \
-  -d '{"taskId": "0f5a5b6c-9a5a-4a1e-9d3f-2b8c5a9e4d71"}'
+  -d '{"clientKey": "YOUR_API_KEY", "taskId": "0f5a5b6c-9a5a-4a1e-9d3f-2b8c5a9e4d71"}'
 ```
 
 ```json
