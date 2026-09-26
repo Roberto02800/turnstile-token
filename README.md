@@ -202,6 +202,8 @@ curl -s https://api.clearance.sh/getTaskResult \
 }
 ```
 
+Either form of authentication works on both calls: put the key in the body as `clientKey`, or send an `X-Private-Key` header. Prefer the header if your client logs outbound requests, because headers are far easier to redact than bodies.
+
 ---
 
 ## Sitekey discovery
