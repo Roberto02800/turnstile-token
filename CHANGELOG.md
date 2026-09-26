@@ -5,6 +5,22 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- `get_status()` for the public `GET /status` endpoint, which needs no key.
+- A balance check at the top of the quickstart example, so a bad key fails
+  before the first solve.
+
+### Fixed
+- `examples/batch_urls.py` now closes its target file when it is done
+  reading it.
+
+### Changed
+- The README curl examples follow the quickstart: the key travels in the body
+  as `clientKey`, with the `X-Private-Key` header documented alongside it.
+- Key rotation guidance added to the security policy.
+
 ## [1.1.0] - 2026-09-25
 
 ### Added
