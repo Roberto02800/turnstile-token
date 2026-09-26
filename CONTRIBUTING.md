@@ -26,6 +26,7 @@ python -m unittest discover -s tests -v
 3. `git status` is clean.
 4. New behaviour has new tests.
 5. Docstrings match the code.
+6. `python examples/batch_urls.py` prints its usage line and exits with 2.
 
 ## Style
 
