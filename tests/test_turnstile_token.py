@@ -360,6 +360,14 @@ class TransportTests(unittest.TestCase):
         self.assertEqual(ctx.exception.http_status, 401)
 
 
+class StatusTests(unittest.TestCase):
+    def test_status_needs_no_key(self):
+        payload = {"errorId": 0, "status": "ok"}
+        with patch_urlopen(lambda req, timeout=0: FakeResponse(payload)):
+            data = ts.get_status()
+        self.assertEqual(data["status"], "ok")
+
+
 class CliTests(unittest.TestCase):
     def test_discover_prints_sitekeys(self):
         html = '<div data-sitekey="0x4AAAAAAAabc"></div>'
