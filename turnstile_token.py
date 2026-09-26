@@ -106,7 +106,8 @@ _PATTERNS: Tuple[re.Pattern, ...] = (
     ),
 )
 
-_TOKEN_SHAPE = re.compile(r"^[0-9A-Za-z._\-]{20,}$")
+# Real Turnstile tokens always start with the 0. prefix.
+_TOKEN_SHAPE = re.compile(r"^0\.[0-9A-Za-z._\-]{18,}$")
 
 
 class TurnstileError(RuntimeError):
@@ -309,7 +310,7 @@ def discover_sitekey(html: str) -> Optional[str]:
 def verify_token(token: str) -> TokenReport:
     """Check a token's shape locally, without calling the API.
 
-    A real Turnstile token is a long, dot-separated, URL-safe string. This is
+    A real Turnstile token is a long, dot-separated string that starts with 0. and is URL-safe. This is
     a cheap sanity check for pipeline wiring mistakes - truncated tokens,
     shell-quoting damage, tokens from the wrong field - not a cryptographic
     verification. Only Cloudflare can say whether a token is accepted.
