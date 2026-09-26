@@ -383,6 +383,7 @@ Everything is asynchronous. `/createTask` returns an id immediately; `/getTaskRe
 - Then poll every **200-300ms**. Sooner mostly buys you `processing` responses; slower adds latency that has nothing to do with the service.
 - A result lives for **five minutes**, and **reading it does not consume it**. The same solution comes back until it expires, so a retry after a dropped connection is free and you never lose a solve you already paid for.
 - After five minutes the id is gone and returns `ERROR_TASKID_INVALID`.
+- `GET /status` takes no key at all, so a monitor can watch capacity without holding a credential.
 
 The `TurnstileClient` does all of this for you:
 
