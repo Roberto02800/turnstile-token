@@ -58,6 +58,7 @@ __all__ = [
     "create_task",
     "get_task_result",
     "get_balance",
+    "get_status",
     "solve",
     "solve_turnstile",
     "discover_sitekeys",
@@ -503,6 +504,17 @@ def get_balance(api_key: str, timeout: float = DEFAULT_TIMEOUT) -> float:
     payload = {"clientKey": api_key}
     data = _post("/getBalance", payload, api_key, timeout)
     return float(data.get("balance") or 0.0)
+
+
+def get_status(timeout: float = DEFAULT_TIMEOUT) -> Dict[str, Any]:
+    """Return platform capacity and node health.
+
+    ``GET /status`` is public and takes no key, so a monitor can watch it
+    without holding a credential.
+    """
+    req = Request(API_BASE + "/status", headers={"User-Agent": _USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
 class TurnstileClient:
