@@ -13,6 +13,8 @@ It finds the sitekey on a page, gets you a ready-to-submit `cf-turnstile-respons
 <a href="https://clearance.sh/register?ref=UQ428VM"><img src="./assets/btn-pricing.png" alt="Pricing" height="46"></a>
 &nbsp;
 <a href="https://clearance.sh/docs/quickstart"><img src="./assets/btn-docs.png" alt="Read the docs" height="46"></a>
+&nbsp;
+<a href="https://t.me/AlpinTamhas928"><img src="./assets/btn-rank.png" alt="Want to rank higher?" height="46"></a>
 
 - **Free credits on sign-up.** No card, no trial countdown - create an account and get started.
 - **$0.40 per 1,000.** $0.00040 a solve. Failed solves are refunded in full.
