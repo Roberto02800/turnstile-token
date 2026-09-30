@@ -567,6 +567,22 @@ Free credits on sign-up, no card required.
   <a href="https://clearance.sh/register?ref=UQ428VM"><img src="./assets/btn-credits.png" alt="Get free credits" height="46"></a>
 </p>
 
+---
+
+**Want your service to rank higher on GitHub?**
+
+Get your product or repository into the **top 1–5 search results** for your keywords:
+
+- 🎯 **Targeted keywords** - rank where your customers already search
+- 📈 **Real visibility** - steady growth that looks organic
+- 💬 **Friendly terms** - small projects welcome
+
+Message me on Telegram and I'll share the details:
+
+<p align="center">
+  <a href="https://t.me/AlpinTamhas928"><img src="./assets/telegram-dark.svg" width="320" alt="Telegram - @AlpinTamhas928"></a>
+</p>
+
 ## License
 
 MIT - see [LICENSE](LICENSE).
